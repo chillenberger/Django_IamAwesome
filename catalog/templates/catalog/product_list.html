@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<section class="fillHeight" id="productListWrapper">
+  {% if product_list %}
+    {% for product in product_list %}
+      <section class="productContainer">
+        <a href="{{ product.get_absolute_url }}">
+          <img class="storyImage" src="{{ product.photo.url }}" alt="{{ product.namee }}">
+        </a>
+        <hi> {{ product.name }} </hi>
+        <p> {{ product.price }}</p>
+      </section>
+    {% endfor %}
+  {% else %}
+    <p>No products listed now please return later</p>
+  {% endif %}
+</section>
+{% endblock %}

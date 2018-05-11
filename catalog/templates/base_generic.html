@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+{% load flatpages %}
+<html lang="en">
+  <head>
+    <!--awesome icons-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://use.fontawesome.com/4f846ad5bc.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Business | I am Awesome</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Daniel Illenberger">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <script src="{% static 'JS\Jquery-3.2.1.js' %}"></script>
+    <link id="size-stylesheet" rel="stylesheet" href="{% static 'css\narrow.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto|Roboto+Slab|Italianno" rel="stylesheet">
+  </head>
+  <body id="home">
+
+<!-- header for small and mobile devices -->
+    <section class="smallScreensOnly col-12" id="mainHeader">
+      <section class="headerBtn" id="headerBtnCart">
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+        ">
+        <input type="image" id="cartForm" src="/static/Photos/font-awesome_4-7-0_shopping-cart_256_0_000000_none.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </section>
+      <section class="headerBtn" id="headerBtnMain">
+        <a id="headerMainLink" href="{% url 'home' %}">I am Awesome . Life</a>
+      </section>
+      <section class="headerBtn" id="menuBtnList">
+        <a onClick="dropDownMenu()"><i class="fas fa-bars"></i></a>
+      </section>
+    </section>
+<a class="largeMenuIcon largeScreensOnly" onClick="dropDownMenu()"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+
+<!-- Header for laptops and large and medium screens -->
+    <ul class="largeScreensOnly col-12" id="mainHeaderLarge">
+      <li class="horizontalList">
+
+      </li>
+      <li class="horizontalList headerBtn headerBtnEndLeft">
+        <a href="{% url 'home' %}">I am Awesome. life </a>
+      </li>
+      <li class="horizontalList headerBtn">
+        <a href="{% url 'storyList' %}">Read a Story</a>
+      </li>
+      <li class="horizontalList headerBtn">
+        <a href="{% url 'create-story' %}">Write a Story</a>
+      </li>
+      <li class="horizontalList headerBtn">
+        <a href="{% url 'productList' %}">Products</a>
+      </li>
+      {% if user.is_authenticated %}
+      <li class="horizontalList headerBtn mediumScreensExclude">
+        <a href="{% url 'user-profile' %}">Profile</a>
+      </li>
+      <li class="horizontalList headerBtn mediumScreensExclude">
+        <a href="{% url 'logout' %}?next={% url 'login' %}">Logout: {{ user.get_username|truncatechars:"8" }}</a>
+      </li>
+      {% else %}
+      <li class="horizontalList headerBtn mediumScreensExclude">
+        <a href="{% url 'login' %}?next={% url 'user-profile' %}">login/Create</a>
+      </li>
+      {% endif %}
+      <!-- <li class="horizontalList headerBtn">
+      <a href="{% url 'about' %}">About</a>
+    </li> -->
+      <!-- <li class="horizontalList headerBtn headerBtnEndRight">
+        <a href="{% url 'contact' %}">Contact</a>
+      </li> -->
+    </ul>
+
+<!-- Dropdown menu -->
+    <section id="dropDownListWrapper">
+      <ul class="menuBox" id="generalItemMenuBox">
+        <li class="dropDownListNode">
+          <i class="fas fa-home"></i>
+          <a class="nav" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="dropDownListNode">
+          <i class="fas fa-pencil-alt"></i>
+          <a class="nav" id="headerSubmitStoryLink" href="{% url 'create-story'%}">Write A Story</a>
+        </li>
+        <li class="dropDownListNode">
+          <i class="fas fa-book"></i>
+          <a class="nav" href="{% url 'storyList' %}">Read A Story</a>
+        </li>
+        <li class="dropDownListNode">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <a class="nav" id="productLink" href="{% url 'productList' %}">Product</a>
+        </li>
+        <li class="dropDownListNode">
+          <i class="fas fa-question"></i>
+          <a class="nav" id="faqLink" href="{% url 'FAQ' %}">FAQ</a>
+        </li>
+        <li class="dropDownListNode">
+          <i class="fas fa-envelope-open"></i>
+          <a class="nav" id="contact" href="{% url 'contact' %}">Contact</a>
+        </li>
+        <li class="dropDownListNode">
+          <i class="fab fa-font-awesome-alt"></i>
+          <a class="nav" id="about" href="{% url 'about' %}">About</a>
+        </li>
+        {% if user.is_authenticated %}
+        <!-- determines if user is logged in and changes accordingly -->
+        <li class="dropDownListNode" id="dropDownListLogout">
+          <i class="fas fa-sign-out-alt"></i>
+          <a class="nav" href="{% url 'logout' %}?next={% url 'login' %}">Logout: {{ user.get_username }}</a>
+        </li>
+        <li class="dropDownListNode">
+          <i class="fas fa-user-circle"></i>
+          <a class="nav" href="{% url 'user-profile'%}">Profile</a>
+        </li>
+        {% else %}
+        <li class="dropDownListNode" id="dropDownListLogin">
+          <i class="fas fa-user-circle"></i>
+          <a class="nav" href="{% url 'login' %}?next={% url 'user-profile' %}">login/Create</a>
+        </li>
+        {% endif %}
+      </ul>
+    </section>
+
+    <section class="mainContentContainer col-12">
+      {% block content %}{% endblock %}
+    </section>
+
+    <section class="end col-12">
+      {% get_flatpages as flatpages %}
+      <table id="endTable">
+        <tr id="endTableRow">
+          {% for page in flatpages %}
+          <td id="endTableBox"><a href="/pages{{ page.url }}">{{ page.title }}</a></td>
+          {% endfor %}
+        </tr>
+      </table>
+    </section>
+  </body>
+  <script>
+
+
+//All script to size moble devices and small screens
+    function myfunction_small_screen(){
+      console.log('css jquary for small screens is working');
+      var windowWidth = $( window ).width();
+      var goldenBoxHeight = windowWidth*0.418;
+      $( ".goldenBox" ).height( goldenBoxHeight );
+
+      return true;
+    }
+
+
+//JavaScript for readjusting width of screen
+    function adjustStyle(width) {
+      width = parseInt(width);
+      if (width < 601) {
+        $("#size-stylesheet").attr("href", "{% static 'css/narrow.css' %}");
+        myfunction_small_screen();
+      } else if (width < 900) {
+        $("#size-stylesheet").attr("href", "{% static 'css/wide.css' %}");
+        $(".mediumScreensExclude").css("display", "none");
+      } else {
+         $("#size-stylesheet").attr("href", "{% static 'css/wide.css' %}");
+         $(".mediumScreensExclude").css("display", "inline");
+      }
+    }
+
+//calls readjustment function
+    $(function() {
+      adjustStyle($(this).width());
+      $(window).resize(function() {
+        adjustStyle($(this).width());
+      })
+    });
+
+
+    //script to make the drop down nave list toggle on//
+    function dropDownMenu(){
+      $( "#dropDownListWrapper" ).toggle();
+      console.log( $( '#dropDownListWrapper').css('display') );
+      event.stopImmediatePropagation();
+    };
+    $(document).ready( function(){
+      // scropt to make drop down nave list togle off when click outside dropdown box
+      $( "body" ).click(function(event){
+        if( $( '#dropDownListWrapper' ).css( 'display') === 'block'){
+          $( '#dropDownListWrapper' ).css( 'display', 'none');
+          event.stopImmediatePropagation();
+          console.log( $( '#dropDownListWrapper').css('display') );
+        }
+      })
+    });
+
+  </script>
+</html>

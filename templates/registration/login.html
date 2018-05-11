@@ -1,0 +1,40 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<section class="fillHeight accessWrapper">
+
+    <section class="loginWrapper col-12" id="loginUpperWrapper">
+      <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+
+        <ul>
+          <li>{{ form.username.label_tag }}</li>
+          <li>{{ form.username }}</li>
+          <li>{{ form.password.label_tag }}</li>
+          <li>{{ form.password }}</li>
+          <li>
+            <input type="submit" value="login" />
+            <input type="hidden" name="next" value="{{ next }}" />
+          </li>
+        </ul>
+      </form>
+      {% if form.errors %}
+        <p id="warningMessage">Your username and password didn't match. Please try again.</p>
+      {% endif %}
+    </section>
+
+    <section class="loginWrapper col-12" id="loginLowerWrapper">
+      <ul>
+        <li class="inLineList horizontalList">
+          <a class="basicButtonLogin" href="{% url 'signup' %}">Creat Account</a>
+        </li>
+        <li class="inLineList horizontalList">
+          {# Assumes you setup the password_reset view in your URLconf #}
+          <a class="basicButtonLogin" href="{% url 'password_reset' %}">Lost password?</a>
+        </li>
+      </ul>
+    </section>
+</section>
+
+{% endblock %}

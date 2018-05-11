@@ -1,0 +1,37 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+
+<!--limits the min height to the window height-->
+<section class="onePageWrapper">
+  <!-- gives the option for the user to enter story -->
+  <section class="bannerSection" id="profileWelcome">
+    <p>Welcome back <br>-{{ user.get_username }}-</p>
+    <img id="profileImage" src="{% static 'Photos/bright orange art rotated.png' %}"></img>
+    <button class="basicButtonLogin">
+      <a id="profileButton" href="{% url 'create-story' %}">Add a New Story</a>
+    </button>
+  </section>
+<!-- if the user has stories entered they will show here -->
+  <section class="col-12" id="profileStoryContainer">
+    <section class="bannerSection" id="profileStoryHeader">
+      <h1>Your Shared Stories</h1>
+    </section>
+    {% if story_list %}
+    {% for story in story_list %}
+    <section class="storyContainer">
+      <!--This will only return the current logged in user stories
+      This works through the profile view filter function-->
+      <div class="storyTitle"> {{story.title}} </div>
+      <a href="{{ story.get_absolute_url }}">
+        <img class="storyImage" src="{{ story.photo.url }}" alt="{{ story.title }}">
+      </a>
+    </section>
+    {% endfor %}
+    {% else %}
+    <p>No Stories</p>
+    {% endif %}
+  </section>
+</section>
+{% endblock %}

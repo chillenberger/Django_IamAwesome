@@ -1,0 +1,35 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<section class="fillHeight accessWrapper" id="signupWrapper">
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    <ul>
+      <li class="signupListTitle">
+        Username:
+      </li>
+      <li class="signupListInput">
+        {{ form.username }}
+      </li>
+        <li class="signupListTitle">
+          Password:
+        </li>
+      <li class="signupListInput">
+        {{ form.password1 }}
+      </li>
+        <li class="signupListTitle">
+          Verify Password:
+        </li>
+      <li class="signupListInput">
+        {{ form.password2 }}
+      </li>
+    </ul>
+    <button class="basicButtonLogin" id="signupButtonSubmit" type="submit">Sign up</button>
+  </form>
+  <p>Return to login</p>
+  <a class="basicButtonLogin" id="signupButtonReturn" href="{% url 'login' %}">login</a>
+</section>
+
+{% endblock %}

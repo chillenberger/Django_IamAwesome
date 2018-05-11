@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<section class="fillHeight centeredInFlow col-12" id="gridContainer">
+  {% if story_list %}
+    {% for story in story_list %}
+        <a href="{{ story.get_absolute_url }}">
+          <section class="storyContainer">
+          <section class="storyTitle"> {{story.title}} </section>
+          <img class="storyImage" src="{{ story.photo.url }}" alt="{{ story.title }}">
+          <article class="storyArticle"> {{ story.story|truncatechars:"75" }}</article>
+          </section>
+        </a>
+    {% endfor %}
+  {% else %}
+    <p>No Stories</p>
+  {% endif %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,686 @@
+/* narrow styling */
+
+/*variables*/
+:root{
+  --main-big-color: #236CA2;
+  --main-sub-color: #2390b0;
+  --sub-color: #f2f2f2;
+  --default-font: 'Robot Slab', sans-serif;
+  --header-height: 9vh;
+  --footer-height: 9vh;
+  --fill-height: 82vh;
+}
+
+/* generic styling */
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  border: none;
+ }
+body{
+  font-size: 20px;
+  line-height: 1.6;
+  font-family: var(--default-font);
+  Padding:0%;
+  margin: 0%;
+  overflow: auto;
+  overflow-x: hidden;
+  margin-top: var(--header-height); /*push page content down out from under the header*/
+}
+img {
+  /* defalt image scales to fit width */
+  width: 100%;
+}
+table, tr, td{
+  border: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  opacity: 1;
+}
+ul{
+  list-style-type: none;
+}
+li {
+  list-style-type: none;
+}
+[class*="col-"] {
+  padding: 15px;
+}
+.row{
+  content: :"";
+  clear: both;
+  display: table;
+}
+
+/* size options  */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/** screen size display**/
+.largeScreensOnly{
+}
+.mediumScreensExclude{
+  display: inline;
+}
+.smallScreensOnly{
+  display: none;
+}
+
+.fillHeight{
+  min-height: 83.5vh;
+}
+.rightInFlow{
+  right: 0;
+}
+.leftInFlow{
+  left: 0;
+}
+.centeredInFlow{
+  text-align: center;
+  margin: auto;
+}
+.rightFloat{
+  float: right;
+}
+.horizontalList{
+  display: inline;
+}
+/* base_generic styling */
+.paddingWrapper{
+  padding: 40px;
+  height: 100%;
+}
+.headerBtn{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left: 1px solid black;
+}
+.headerBtnEndLeft{
+  border-left: none;
+}
+.headerBtnEndRight{
+  border-right: none;
+}
+.headerBtn:hover{
+  opacity: 0.75;
+  cursor: pointer;
+  border-left: 4px solid var(--main-big-color);
+  padding-left: 7px;
+  background-color: grey;
+}
+.headerBtnEndLeft:hover{
+  padding-left: 6px;
+}
+
+#mainHeaderLarge{
+  position: fixed;
+  height: var(--header-height);
+  top: 0px;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 0px 0px 40px grey;
+  padding: 10px;
+}
+.mainContentContainer{
+  padding: 0px;
+}
+.largeMenuIcon{
+  position: fixed;
+  top: var(--header-height);
+  left: 0px;
+  z-index: 2;
+  font-size: 1.5vh;
+}
+#dropDownListWrapper{
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0px
+  background-color: white;
+  color: white;
+  top: 11.5vh;  /* header height plus carrot(class largeMenuIcon) font height*/
+}
+.menuBox{
+  text-align: center;
+  background-color: black;
+  opacity: 0.75;
+  width: max-content;
+}
+.dropDownListNode{
+  border-left: 8px solid black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 14%;
+  padding-right: 14%;
+  text-align: left;
+  white-space: nowrap;
+}
+.dropDownListNode:hover{
+  border-left: 8px solid var(--main-big-color);
+}
+.nav{
+  color: white;
+  padding: 5px;
+}
+.nav:link{
+  color: white;
+}
+.nav:active{
+  color: white;
+}
+.nav:visited{
+  color: white;
+}
+.UserStatus{
+  color: white;
+}
+#userItemMenuBox{
+border-top: 1px dashed white;
+}
+#dropMainLink{
+font-size: 20px;
+}
+#dropBoxHomeBtn{
+}
+#dropBoxHomeLinkSubmitStoryBtn{
+}
+#dropBoxProductBtn{
+}
+#dropBoxContactBtn{
+}
+#dropBoxFaqBtn{
+}
+#dropBoxCart{
+}
+#cartMain{
+float: left;
+}
+#dropDownListLogin{
+border-top: 1px dashed white;
+}
+#dropDownListLogout{
+border-top: 1px dashed white;
+}
+
+#flatPage{
+  overflow: scroll;
+}
+.end{
+  padding: 0px;
+  height: var(--footer-height);
+  text-align: center;
+  box-shadow: 0px 0px 40px grey;
+}
+#endTable{
+  height: 100%;
+}
+#endTableRow{
+}
+#endTableBox{
+  padding: 5px;
+}
+/*- intro styling -*/
+.introContainer{
+  background-image:url("../Photos/BlackAndWhiteMtn.jpeg");
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.75;
+  text-align: center;
+  z-index:-1;
+  height: 80vh;
+}
+#introMainArt{
+  display: inline-block;
+  position: relative;
+  background-color: black;
+  padding: 5px;
+  color: white;
+  font-size: 20px;
+  line-height: 1.3;
+  border-left: 8px solid var(--main-big-color);
+  margin-top: 30vh;
+}
+#introMainArt:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+#introMainArt:active {
+  opacity: inherit;
+}
+#introDecoration{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: auto;
+  margin-top: -5%;
+  margin-right: -5%;
+  border-radius: 50%;
+  background: transparent;
+  z-index: 3;
+}
+
+
+/*instructions*/
+.goldenBox{
+  width: 100%;
+  /**Height determined by JavaScript**/
+}
+.instructionBanner{
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.bannerSection{
+  background-color: black;
+  opacity: 0.75;
+  color: white;
+  padding: 20px;
+  font-family: Italianno;
+  font-size: 30px;
+}
+.introWrapper{
+  box-shadow: 0px 1px 10px grey;
+}
+.introInstructHead{
+  font-size: 20px;
+}
+.introInstructParag{
+  font-size: 20px;
+}
+#writeIntro{
+  border-bottom: 1px solid grey;
+}
+#readIntro{
+  text-align: left;
+}
+#aboutIntro{
+  right: 0;
+  padding: 40px;
+  box-shadow: 0px -1px 10px rgba(0,0,0,.75), 0px 1px 10px rgba(0,0,0,.75);
+}
+#writeInstructionImage{
+  float: left;
+  position: relative;
+  top: 0px;
+  width: 25%;
+  height: auto;
+  margin: 10px;
+  margin-top: 0;
+  margin-right: 0;
+  border-radius: 50%;
+  background: transparent;
+  padding: 20px;
+}
+#readInstructionImage{
+  position: relative;
+  width: 25%;
+  height: auto;
+  margin: 10px;
+  margin-top: -6%;
+  margin-right: -5%;
+  background: transparent;
+  z-index: 1;
+  border-radius: 50%;
+  float: right;
+  padding: 20px;
+}
+#aboutInstructionImage{
+  float: right;
+  position: relative;
+  width: 25%;
+  height: auto;
+  background: transparent;
+  z-index: 1;
+  border-radius: 50%;
+  margin: 10px;
+  margin-top: -80px;
+  margin-right: -40px;
+}
+
+
+/*- storys styling -*/
+#featuredStories{
+  padding: 0px;
+  width: 100%;
+}
+#gridContainer{
+  overflow: auto;
+  text-align: center;
+  background-color: transparent;
+  background-image:url("../Photos/BlueCar.png");
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+#fullStoryContainer{
+  background-color: #ffebd0;
+}
+.storyContainer{
+  width: 270px;
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  overflow: hidden;
+  background-color: white;
+  background: linear-gradient(#ddd, white );
+  border: 1px solid #b8b8b8;
+}
+.infoContainer{
+  width: 100%;
+  opacity: .9;
+  text-align: center;
+}
+.storyImage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.storyImage:hover {
+  cursor: pointer;
+}
+.storyArticle{
+  margin: 20px;
+  text-align: left;
+  border-left: 2px solid var(--main-big-color);
+  padding-left: 10px;
+  height: 20vh;
+}
+.storyArticle:First-letter{
+  font-size: 40px;
+  float: left;
+  margin: -9.5px 1px -24px -2px;
+  text-transform: uppercase;;
+}
+.storyArticleFull{
+  text-align: left;
+  border-left: 2px solid var(--main-big-color);
+  padding-left: 10px;
+}
+.storyArticleFull:First-letter{
+  font-size: 40px;
+  float: left;
+  margin: -9.5px 1px -24px -2px;
+  text-transform: uppercase;;
+}
+.storyTitle{
+  position: absolute;
+  text-align: center;
+  background-color: black;
+  width: 61%;
+  color: white;
+  opacity: 0.65;
+  padding: 2%;
+  top: 16.2%;
+  left: 30.5%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); /*IE-9*/
+  -webkit-transform: translate(-50%, -50%); /*safari*/
+}
+
+/*Add Story Form*/
+.formListTitle{
+  text-align: left;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+}
+.formListInput{
+  text-align: left;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+}
+#addStoryList{
+  background-color: var(--sub-color);
+}
+#id_title{
+  width: 100%;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 4px;
+  height: 100%;
+}
+#id_story{
+  width: 100%;
+  font-size: 15px;
+  background-color: white;
+  border-radius: 4px;
+}
+#id_photo{
+  width: 100%;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 4px;
+}
+#submitListNode{
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#submitFormButton{
+    font-weight: 900;
+    border-radius: 4px;
+}
+#upload-demo-wrapper{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 1;
+}
+#upload-demo{
+  height: fit-content;
+  margin-top: 10vh;
+}
+
+/* story_detail styling */
+#fullStoryTitle{
+  text-align: center;
+  font-size: 7vw;
+}
+.fullStoryButton{
+  text-align: center;
+  padding: 5px 20px;
+}
+.backgroundStoryDetail{
+  background-color: var(--sub-color);
+  background-image:url("../Photos/CanvisBackground.png");
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+#buttonWrapper{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+#fullStoryButtonWrapper{
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* profile styling specific*/
+#profileWelcome{
+  text-align: center;
+  background-color: white;
+  color: black;
+  padding: 40px;
+  font-family: var(--default-font);
+  opacity: 1;
+}
+#profileStoryContainer{
+  background-color: var(--sub-color);
+  padding-top: 20px;
+  box-shadow: 0px 0px 40px grey;
+  }
+#profileStoryHeader{
+  text-align: center;
+  background-color: var(--sub-color);
+  color: black;
+  font-family: var(--default-font);
+}
+#profileButton{
+  padding: 10px;
+  font-size: 20px;
+}
+#profileImage{
+  border-radius: 50%;
+  width: 50%;
+  margin: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+/* login/out/create Style*/
+.loginWrapper{
+  margin: auto;
+  padding: 5px;
+  background-color: #f2f2f2;
+  opacity: 0.75;
+}
+.basicButtonLogin{
+  background-color: var(--main-big-color);
+  background: linear-gradient(var(--main-sub-color), var(--main-big-color ) );
+  border: 1px solid var(--main-big-color);
+  padding: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  opacity: 0.75;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+.basicButtonLogin:hover{
+  opacity: 1;
+}
+.signupListTitle{
+}
+.singupListInput{
+}
+.accessWrapper{
+  padding: 40px 0px 0px 0px;
+  color: black;
+  background-color: var(--sub-color);
+  background-image:url("../Photos/Guy at Ocean.png");
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+#loginUpperWrapper{
+  position: relative;
+  text-align: center;
+  padding-bottom: 80px;
+}
+#loginLowerWrapper{
+  position: absolute;
+  bottom: 130px;
+  text-align: center;
+}
+#warningMessage{
+  margin-bottom: -80px;
+}
+#signupButtonReturn{
+  font-size: 13.33px;
+}
+#signupButtonSubmit{
+
+}
+#signupWrapper{
+  padding-left: 20px;
+}
+
+/**Contact Page**/
+#contactWrapper{
+  text-align: center;
+  background-image:url("../Photos/super kid.png");
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+/*FAQ page*/
+#faqWrapper{
+  text-align: left;
+  background-image:url("../Photos/People on truck.png");
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+#faqList{
+  background-color: white;
+  opacity: 0.65;
+  padding: 10px;
+}
+
+/*products*/
+.productContainer{
+  background-color: white;
+  display: inline-block;
+  width: 32.5%;
+  text-align: center;
+}
+#productListWrapper{
+  padding: 20px 10px;
+  text-align: center;
+}
+#productDetailWrapper{
+  text-align: center;
+}
+#producName{
+  font-weight: bold;
+}
+.productWrapper{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#productDescriptionWrapper{
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+/*About page */
+#aboutBackground{
+  background-image:url("../Photos/sun and ocean.png");
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center top;
+  box-shadow: 0px 0px 500px white inset;
+}
