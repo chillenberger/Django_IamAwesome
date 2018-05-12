@@ -18,7 +18,7 @@ class Story(models.Model):
     photo_width = models.CharField( max_length = 8, help_text = "height of photo")
     top = models.CharField( max_length = 20, help_text = "center of the photo")
     left = models.CharField( max_length = 20, help_text = "center of the photo")
-    orientation = models.CharField( max_length = 2, help_text = "photo orientation")
+    # orientation = models.CharField( max_length = 2, help_text = "photo orientation") heroku test
 
     #Returns a string representing the model
     def __str__(self):

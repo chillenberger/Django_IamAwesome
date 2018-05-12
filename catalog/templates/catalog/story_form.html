@@ -34,7 +34,7 @@
       <li hidden>{{form.photo_height}}</li>
       <li hidden>{{form.top}}</li>
       <li hidden>{{form.left}}</li>
-      <li hidden>{{form.orientation}}</li>
+      <!-- <li hidden>{{form.orientation}}</li> -->
 
 
       <li id="submitListNode">
@@ -94,7 +94,7 @@ function evaluateImageParameters () {
   $('#id_photo_width').val(widthOfImage);
   $('#id_top').val( position.top);
   $('#id_left').val(position.left);
-  $('#id_orientation').val( uploadedPhotoOrientation);
+  // $('#id_orientation').val( uploadedPhotoOrientation);  heroku test
 };
 
 // toggle cropper view
@@ -194,7 +194,7 @@ $('#submitFormButton').on('click', function (ev) {
   console.log( "width of image"+ $("#id_photo_width").val());
   console.log( "top of image"+ $("#id_top").val());
   console.log( "left side of image"+ $("#id_left").val());
-  console.log( "orientation"+ $("id_orientation").val());
+  // console.log( "orientation"+ $("id_orientation").val());  heroku test
 
   if( (heightOfImage < 100) || (widthOfImage < 160)) {
     alert('click crop button and zoom in on image');

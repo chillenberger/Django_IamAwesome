@@ -9,7 +9,7 @@ from django.core.files import File
 class NewStoryForm(forms.ModelForm):
     class Meta:
         model = Story
-        fields = ['title', 'story', 'photo', 'photo_height', 'photo_width', 'top', 'left', 'orientation']
+        fields = ['title', 'story', 'photo', 'photo_height', 'photo_width', 'top', 'left']#, 'orientation'] heroku test
 
     #this function allows us to crop the image to a desired width and Height
     #shoud change this out with use input to customize exact picture desired.
@@ -21,7 +21,7 @@ class NewStoryForm(forms.ModelForm):
 
         img = Image.open( story.photo )
 
-        img = img.rotate(-90*float(story.orientation), expand=True)
+        # img = img.rotate(-90*float(story.orientation), expand=True) heroku test
 
         natural_image_width, natural_image_height = img.size
         image_height = float(story.photo_height)
