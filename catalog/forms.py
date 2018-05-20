@@ -4,7 +4,9 @@ from django.utils.translation import ugettext_lazy as _
 from .models import Story
 from PIL import Image
 from django.core.files import File
+from boto.s3.key import Key
 import boto3
+import os
 
 class NewStoryForm(forms.ModelForm):
     class Meta:
@@ -15,9 +17,6 @@ class NewStoryForm(forms.ModelForm):
     #shoud change this out with use input to customize exact picture desired.
     def save( self ):
         story = super(NewStoryForm, self).save()
-
-        backup_image = Image.open( story.photo )
-        backup_image.save(  "media/image/backup_story_photo/" + story.title + ".png")
 
         img = Image.open( story.photo )
 
@@ -51,6 +50,7 @@ class NewStoryForm(forms.ModelForm):
 
         cropped_image = img.crop((left, top, right, bottom))
         print ( 'photo cropped ran')
+        print ( story.photo.path )
         print ( story.photo.key )
         cropped_image.save( story.photo.key)
         print("Save attempted")
