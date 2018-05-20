@@ -5,7 +5,7 @@ from .models import Story
 from PIL import Image
 from django.core.files import File
 import boto3
-from boto3.s3.key import Key
+# from boto.s3.key import Key
 import os
 
 class NewStoryForm(forms.ModelForm):
