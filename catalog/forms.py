@@ -6,6 +6,7 @@ from PIL import Image
 from django.core.files import File
 import boto3
 import os
+from io import BytesIO
 
 class NewStoryForm(forms.ModelForm):
     class Meta:
