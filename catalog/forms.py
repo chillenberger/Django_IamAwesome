@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from .models import Story
 from PIL import Image
 from django.core.files import File
-import boto
+import boto3
 
 class NewStoryForm(forms.ModelForm):
     class Meta:
