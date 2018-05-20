@@ -4,8 +4,8 @@ from django.utils.translation import ugettext_lazy as _
 from .models import Story
 from PIL import Image
 from django.core.files import File
-from boto.s3.key import Key
 import boto3
+from boto3.s3.key import Key
 import os
 
 class NewStoryForm(forms.ModelForm):
