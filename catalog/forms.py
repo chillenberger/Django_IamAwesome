@@ -51,13 +51,14 @@ class NewStoryForm(forms.ModelForm):
         print ( 'photo cropped ran')
         print ( story.photo.name )
         # print ( story.photo.key )
-        localPhotoFile = "media/" + story.photo.name
-        s3PhotoFile = story.photo.name
-        cropped_image.save( localPhotoFile)
-        print ( localPhotoFile )
+        # localPhotoFile = "media/" + story.photo.name
+        # s3PhotoFile = story.photo.name
+        # cropped_image.save( localPhotoFile)
+        # print ( localPhotoFile )
         # print ( cropped_image.path ) dosn't work -------->
-        s3 = boto3.resource('s3')
-        s3.Object('iamawesomepicturebucket2', s3PhotoFile).put(Body=open( localPhotoFile, 'rb'))
+        s3 = boto3.client('s3')
+        # s3.Object('iamawesomepicturebucket2', s3PhotoFile).put(Body=open( localPhotoFile, 'rb'))
+        s3.upload_fileobj( cropped_image , "iamawesomepicturebucket2", story.photo.name )
 
         print("Save attempted")
 
