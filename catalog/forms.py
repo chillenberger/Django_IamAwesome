@@ -56,7 +56,7 @@ class NewStoryForm(forms.ModelForm):
         # cropped_image.save( "media/" + story.photo.name )
         # f = cropped_image.read()
         s3 = boto3.client('s3')
-        s3.Object('iamawesomepicturebucket2', s3PhotoFile).put(Body=open( "media/" + story.photo.name, 'rb'))
+        # s3.Object('iamawesomepicturebucket2', s3PhotoFile).put(Body=open( "media/" + story.photo.name, 'rb'))
 
         # s3.upload_fileobj( cropped_image.tobitmap , "iamawesomepicturebucket2", story.photo.name )
 
