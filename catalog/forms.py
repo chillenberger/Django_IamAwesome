@@ -55,7 +55,7 @@ class NewStoryForm(forms.ModelForm):
         s3PhotoFile = story.photo.name
         cropped_image.save( localPhotoFile)
         print ( localPhotoFile )
-        print ( cropped_image.path )
+        # print ( cropped_image.path ) dosn't work -------->
         s3 = boto3.resource('s3')
         s3.Object('iamawesomepicturebucket2', s3PhotoFile).put(Body=open( localPhotoFile, 'rb'))
 
