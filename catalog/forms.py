@@ -39,7 +39,7 @@ class NewStoryForm(forms.ModelForm):
         right = left + view_width
 
         top = top*ratio_height
-        left= left*ratio_widthtt
+        left= left*ratio_width
         bottom = bottom*ratio_height
         right = right*ratio_width
 
