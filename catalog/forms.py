@@ -5,7 +5,6 @@ from .models import Story
 from PIL import Image
 from django.core.files import File
 import boto3
-# from boto.s3.key import Key
 import os
 
 class NewStoryForm(forms.ModelForm):
@@ -53,6 +52,9 @@ class NewStoryForm(forms.ModelForm):
         print ( story.photo.name )
         # print ( story.photo.key )
         # cropped_image.save( story.photo.key)
+        s3 = s3.boto3.resource('s3')
+        s3.Object('iamawesomepicturebucket2', story.photo.name).put(Body=open(story.photo, 'rb'))
+
         print("Save attempted")
 
         return story
