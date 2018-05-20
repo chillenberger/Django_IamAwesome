@@ -39,7 +39,7 @@ class NewStoryForm(forms.ModelForm):
         right = left + view_width
 
         top = top*ratio_height
-        left= left*ratio_width
+        left= left*ratio_widthtt
         bottom = bottom*ratio_height
         right = right*ratio_width
 
@@ -51,7 +51,7 @@ class NewStoryForm(forms.ModelForm):
         print ( 'photo cropped ran')
         print ( story.photo.name )
         # print ( story.photo.key )
-        cropped_image.save( "staticfiles/" + story.photo.name)
+        cropped_image.save( "media/" + story.photo.name)
         s3 = boto3.resource('s3')
         # s3.Object('iamawesomepicturebucket2', story.photo.name).put(Body=open(story.photo, 'rb'))
 
