@@ -51,8 +51,8 @@ class NewStoryForm(forms.ModelForm):
 
         cropped_image = img.crop((left, top, right, bottom))
         print ( 'photo cropped ran')
-        print ( story.photo.path )
-        # cropped_image.save( story.photo.path )
+        # print ( story.photo.path )
+        cropped_image.save()
         print("Save attempted")
 
         return story
