@@ -52,11 +52,12 @@ class NewStoryForm(forms.ModelForm):
         print ( 'photo cropped ran')
         print ( story.photo.name )
 
-        f = cropped_image.read()
+        cropped_image.save( story.photo.name )
+        # f = cropped_image.read()
         s3 = boto3.client('s3')
         # s3.Object('iamawesomepicturebucket2', s3PhotoFile).put(Body=open( localPhotoFile, 'rb'))
 
-        s3.upload_fileobj( f , "iamawesomepicturebucket2", story.photo.name )
+        # s3.upload_fileobj( cropped_image.tobitmap , "iamawesomepicturebucket2", story.photo.name )
 
         print("Save attempted")
 
