@@ -52,7 +52,7 @@ class NewStoryForm(forms.ModelForm):
         print ( story.photo.name )
         # print ( story.photo.key )
         # cropped_image.save( story.photo.key)
-        s3 = s3.boto3.resource('s3')
+        s3 = boto3.resource('s3')
         s3.Object('iamawesomepicturebucket2', story.photo.name).put(Body=open(story.photo, 'rb'))
 
         print("Save attempted")
