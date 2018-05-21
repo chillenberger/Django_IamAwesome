@@ -6,7 +6,7 @@ from PIL import Image
 from django.core.files import File
 import boto3
 import os
-import io
+import stringIO
 
 class NewStoryForm(forms.ModelForm):
     class Meta:
@@ -52,11 +52,10 @@ class NewStoryForm(forms.ModelForm):
         print ( 'photo cropped ran')
         print ( story.photo.name )
 
-        output = io.BytesIO()
-        cropped_image.save( output )
+        cropped_image.save( "media/image/test.png" )
         s3 = boto3.client('s3')
 
-        s3.upload_fileobj( output , "iamawesomepicturebucket2", story.photo.name )
+        # s3.upload_fileobj( output , "iamawesomepicturebucket2", story.photo.name )
 
         print("Save attempted")
 
