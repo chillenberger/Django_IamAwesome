@@ -60,7 +60,7 @@ class NewStoryForm(forms.ModelForm):
         test.show()
         s3 = boto3.client('s3')
 
-        s3.object("iamawesomepicturebucket2", "anything.png" ).put(Body=open("media/image/test.png", 'rb'))
+        s3.Object("iamawesomepicturebucket2", "anything.png" ).put(Body=open("media/image/test.png", 'rb'))
         # s3.upload_fileobj( output , "iamawesomepicturebucket2", story.photo.name )
 
         print("Save attempted")
