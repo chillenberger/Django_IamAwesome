@@ -53,6 +53,10 @@ class NewStoryForm(forms.ModelForm):
 
         cropped_image.save( "media/image/test.png" )
         test = Image.open( "media/image/test.png" )
+        if os.path.isfile( "media/image/test.png" ):
+            print( "test.png exists")
+        else:
+            print( " no dice bro, your file was not saved")
         test.show()
         s3 = boto3.client('s3')
 
