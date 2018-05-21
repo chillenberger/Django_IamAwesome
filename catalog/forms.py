@@ -58,7 +58,7 @@ class NewStoryForm(forms.ModelForm):
         else:
             print( " no dice bro, your file was not saved")
         test.show()
-        s3 = boto3.client('s3')
+        s3 = boto3.resource('s3')
 
         s3.Object("iamawesomepicturebucket2", "anything.png" ).put(Body=open("media/image/test.png", 'rb'))
         # s3.upload_fileobj( output , "iamawesomepicturebucket2", story.photo.name )
