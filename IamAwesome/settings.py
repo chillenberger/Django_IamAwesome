@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.flatpages', #This allows for static html pages and permission
     'accounts', #For making accounts
     'croppie',
-    'IamAwesome'
+    # 'IamAwesome'
     'storages' #for aws database storage used for user profile picture storage and uploading since heroku does not allow for this
 ]
 
