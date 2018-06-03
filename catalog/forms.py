@@ -3,7 +3,7 @@ from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 from .models import Story
 from django.core.files import File
-from croppie.fields import Croppiefield
+from croppie.fields import CroppieField
 import boto3
 import os
 
