@@ -5,17 +5,16 @@
 {% load app_filters %}
 <head>
   {% load static %}
-  <link rel="stylesheet" href="{% static 'css/croppie.css' %}" />
-  <script src="{% static 'JS/croppie.js' %}"></script>
 </head>
 
 
 
-<section>
+<section id="addStoryList">
   <form id="myForm" class="fillHeight" action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
 
-    <ul class="fillHeight col-12" id="addStoryList">
+    <ul class="fillHeight col-12" >
+
       <li class="formListTitle col-12">Story Title</li>
       <li class="formListInput col-12"> {{ form.title }}</li>
 
@@ -23,191 +22,33 @@
       <li class="formListInput col-12"> {{ form.story }} </li>
 
       <li class="formListTitle col-12">Photo</li>
-      <li id="photoForForm" class="formListInput col-12"><a> {{ form.photo }} </a>
-        <button id="changeImage" class="basicButtonLogin" type="button" disabled onClick="toggleView()">
-          <i class="fa fa-crop" aria-hidden="true"></i>
-          Crop
-        </button>
-      </li>
+      <li id="photoForForm" class="formListInput col-6"><a> {{ form.photo }} </a></li>
 
-      <li hidden> {{form.photo_width}}</li>
-      <li hidden>{{form.photo_height}}</li>
-      <li hidden>{{form.top}}</li>
-      <li hidden>{{form.left}}</li>
-      <!-- <li hidden>{{form.orientation}}</li> -->
+      <hr>
+
+      <li class="col-6">
+        <div style="width:50%">
+          <div id="cropper"></div>
+        </div>
+        <div>
+          <button id="rotate_image" class="basicButtonLogin rotate" type="button" data-deg="-90" disabled>Rotate</button>
+        </div>
+      </li>
 
 
       <li id="submitListNode">
         <button id="submitFormButton" type="submit" value="submit" class=" Button basicButtonLogin col-12" value="submit">Submit</button>
       </li>
+
     </ul>
+
   </form>
-</section>
 
-<section>
-  <div class="fillHeight col-12" id="upload-demo-wrapper">
-    <div id="upload-demo"></div>
-
-    <section class="centeredInFlow">
-      <button class="basicButtonLogin rotate" data-deg="-90">Rotate Image</button>
-    </section>
-    <section class="centeredInFlow">
-      <button class="basicButtonLogin" type="button" onClick="toggleView()">Submit Image</button>
-    </section>
-    <section class="centeredInFlow">
-      <button class="basicButtonLogin" type="button" onClick="toggleDelete()">Change Image</button>
-    </section>
-  </div>
 
 </section>
 
 
+{{ form.media }}
 
-
-
-<script type="text/javascript">
-
-
-// build cropper view
-var $profilePicPreview = $('#upload-demo').croppie({
-  viewport: {
-    width: 162,
-    height: 100,
-    type: 'square',
-  },
-  boundary: {
-    width: 300,
-    height: 300
-  },
-  enableExif: true,
-  enforceBoundary: true,
-  enableOrientation: true,
-});
-
-// Evaluate image parameters
-function evaluateImageParameters () {
-  var heightOfImage = $(".cr-overlay").height();
-  var widthOfImage = $(".cr-overlay").width();
-  var position = $(".cr-overlay").position();
-  //uploadedPhotoOrientation == global variable
-  $('#id_photo_height').val(heightOfImage);
-  $('#id_photo_width').val(widthOfImage);
-  $('#id_top').val( position.top);
-  $('#id_left').val(position.left);
-  // $('#id_orientation').val( uploadedPhotoOrientation);  heroku test
-};
-
-// toggle cropper view
-$.fn.makeCropperView = function () {
-  if( this.css( "display") == "none"){
-    this.css("display", "block");
-    $('#myForm').css("opacity", 0.1);
-  } else {
-      evaluateImageParameters();
-    if( ($("id_photo_width").val() < 160) || ($("id_photo_height").val() < 100) ){
-      alert("Zoom in on image");
-    } else{
-      this.css( "display", "none");
-      $('#myForm').css("opacity", 1);
-      $('#changeImage').prop('disabled', false);
-    }
-  }
-  return this;
-};
-
-// deletes an instance of crop
-$.fn.deleteImage = function () {
-  if( this.css('display') != 'none') {
-    this.css( "display", "none");
-    $('#myForm').css("opacity", 1);
-  }
-  $('#changeImage').prop('disabled', true);
-  $('#id_photo').val("");
-  uploadedPhotoOrientation = 0;
-  return false;
-};
-
-
-// trackes the orientation of the uploaded photo.
-// this is in due to not making croppie work
-// fix this
-$('.rotate').on('click', function(ev) {
-  $profilePicPreview.croppie('rotate', parseInt($(this).data('deg')));
-  evaluateImageParameters();
-  rotations(1);
-});
-function  rotations (x) {
-  if( x == 0 ){
-    uploadedPhotoOrientation = 0;
-  }
-  if ( x != 0 ){
-    uploadedPhotoOrientation = uploadedPhotoOrientation+1;
-    if( uploadedPhotoOrientation >= 4){
-      uploadedPhotoOrientation = uploadedPhotoOrientation-4;
-    }
-  }
-
-  var position = $(".cr-overlay").position();
-  console.log( 'top after rotation ='+ position.top)
-  console.log( 'side after rotation ='+ position.left)
-  console.log( "orientation"+ uploadedPhotoOrientation );
-}
-
-
-
-
-function readFile(input) {
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-    $('#upload-demo-wrapper').makeCropperView();
-    reader.onload = function (event) {
-      $profilePicPreview.croppie('bind', {
-        url: event.target.result
-      });
-    };
-
-    reader.readAsDataURL(input.files[0]);
-  } else {
-    alert('Sorry - you\'re browser doesn\'t support the FileReader API');
-  }
-}
-
-
-
-$('#id_photo').on('change', function() { readFile(this); });
-
-function toggleView(){
-  $('#upload-demo-wrapper').makeCropperView();
-}
-
-function toggleDelete(){
-   $('#upload-demo-wrapper').deleteImage();
-}
-
-
-// Gather photo info and submit form to server
-$('#submitFormButton').on('click', function (ev) {
-  // evaluateImageParameters();
-  var heightOfImage = $('#id_photo_height').val();
-  var widthOfImage = $('#id_photo_width').val();
-  console.log( "height of image"+ $("#id_photo_height").val());
-  console.log( "width of image"+ $("#id_photo_width").val());
-  console.log( "top of image"+ $("#id_top").val());
-  console.log( "left side of image"+ $("#id_left").val());
-  // console.log( "orientation"+ $("id_orientation").val());  heroku test
-
-  if( (heightOfImage < 100) || (widthOfImage < 160)) {
-    alert('click crop button and zoom in on image');
-    ev.preventDefault();
-  }
-  // ev.preventDefault();
-});
-
-$(document).ready(function() {
-  var uploadedPhotoOrientation = 0;
-  rotations(0)
-});
-
-</script>
 
 {% endblock %}
