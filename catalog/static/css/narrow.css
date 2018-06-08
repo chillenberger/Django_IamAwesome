@@ -312,9 +312,13 @@ li {
 #writeInstructionImage{
   float: right;
   position: relative;
-  width: 55%;
-  height: auto;
+  width: 55vw;
+  height: 55vw;
   margin: 10px;
+  background-image:url(Photos/Mobile/bright orange art rotatedSmallCompressed.png);
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center top;
   margin-top: -129px;
   margin-right: -40px;
   border-radius: 50%;
