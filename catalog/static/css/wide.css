@@ -244,7 +244,7 @@ border-top: 1px dashed white;
 }
 /*- intro styling -*/
 .introContainer{
-  background-image:url("../Photos/BlackAndWhiteMtn.jpeg");
+  background-image:url("../Photos/WS/BlackAndWhiteMtn.jpeg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -375,7 +375,7 @@ border-top: 1px dashed white;
   overflow: auto;
   text-align: center;
   background-color: transparent;
-  background-image:url("../Photos/BlueCarSmallCompressed.jpg");
+  background-image:url("../Photos/WS/BlueCarSmallCompressed.jpg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -520,7 +520,7 @@ border-top: 1px dashed white;
 }
 .backgroundStoryDetail{
   background-color: var(--sub-color);
-  background-image:url("../Photos/CanvisBackground.png");
+  background-image:url("../Photos/WS/CanvisBackground.png");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -596,7 +596,7 @@ border-top: 1px dashed white;
   padding: 40px 0px 0px 0px;
   color: black;
   background-color: var(--sub-color);
-  background-image:url("../Photos/Guy at Ocean.png");
+  background-image:url("../Photos/WS/Guy at Ocean.png");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -628,7 +628,7 @@ border-top: 1px dashed white;
 /**Contact Page**/
 #contactWrapper{
   text-align: center;
-  background-image:url("../Photos/super kid.png");
+  background-image:url("../Photos/WS/super kid.png");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -637,7 +637,7 @@ border-top: 1px dashed white;
 /*FAQ page*/
 #faqWrapper{
   text-align: left;
-  background-image:url("../Photos/People on truck.png");
+  background-image:url("../Photos/WS/People on truckSmallCompressed.jpg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -677,7 +677,7 @@ border-top: 1px dashed white;
 
 /*About page */
 #aboutBackground{
-  background-image:url("../Photos/sun and ocean.png");
+  background-image:url("../Photos/WS/sun and ocean.png");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;

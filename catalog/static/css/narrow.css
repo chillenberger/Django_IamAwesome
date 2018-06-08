@@ -242,7 +242,7 @@ li {
 }
 /*- intro styling -*/
 .introContainer{
-  background-image:url("../Photos/BlackAndWhiteMtn.jpeg");
+  background-image:url("../Photos/Mobile/BlackAndWhiteMtn.jpeg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -523,7 +523,7 @@ li {
   padding: 40px 0px 0px 0px;
   color: black;
   background-color: var(--sub-color);
-  background-image:url("../Photos/Guy at Ocean.png");
+  background-image:url("../Photos/Mobile/Guy at Ocean.png");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -558,7 +558,7 @@ li {
 /**Contact Page**/
 #contactWrapper{
   text-align: center;
-  background-image:url("../Photos/super kid.png");
+  background-image:url("../Photos/Mobile/super kid.png");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -567,7 +567,7 @@ li {
 /*FAQ page*/
 #faqWrapper{
   text-align: left;
-  background-image:url("../Photos/People on truck.png");
+  background-image:url("../Photos/Mobile/People on truckSmallCompressed.jpg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -606,7 +606,7 @@ li {
 
 /*About page */
 #aboutBackground{
-  background-image:url("../Photos/sun and ocean.png");
+  background-image:url("../Photos/Mobile/sun and ocean.png");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
