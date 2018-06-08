@@ -337,7 +337,7 @@ li {
   width: 55%;
   height: auto;
   background: transparent;
-  background: url("..Photos/Mobile/coffee and dog.png");
+  background-image:url("..Photos/Mobile/coffee and dog.png");
   z-index: 1;
   border-radius: 50%;
   margin: 10px;
