@@ -334,10 +334,10 @@ li {
 #aboutInstructionImage{
   float: right;
   position: relative;
-  width: 55%;
-  height: auto;
+  width: 55vw;
+  height: 14vh;
   background: transparent;
-  background-image:url("https://s3.amazonaws.com/iamawesomepicturebucket2/static/Photos/Mobile/coffee+and+dog.png");
+  background-image:url("../Photos/Mobile/coffee+and+dog.png");
   background-repeat:no-repeat;
   background-size: cover;
   background-position: center top;
