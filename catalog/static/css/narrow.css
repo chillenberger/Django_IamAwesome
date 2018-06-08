@@ -338,6 +338,9 @@ li {
   height: auto;
   background: transparent;
   background-image:url("https://s3.amazonaws.com/iamawesomepicturebucket2/static/Photos/Mobile/coffee+and+dog.png");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center top;
   z-index: 1;
   border-radius: 50%;
   margin: 10px;
