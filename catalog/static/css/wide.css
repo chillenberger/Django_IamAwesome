@@ -336,7 +336,10 @@ border-top: 1px dashed white;
   top: 0px;
   width: 25vw;
   height: 25vw;
-  background-image:url('../Photos/writing picture.jpeg');
+  background-image:url('../Photos/WS/writing+pictureSmallcompressed.jpeg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center top;
   margin: 10px;
   margin-top: 0;
   margin-right: 0;
@@ -351,7 +354,12 @@ border-top: 1px dashed white;
   margin: 10px;
   margin-top: -6%;
   margin-right: -5%;
-  background: transparent;
+  width: 25vw;
+  height: 25vw;
+  background-image:url('../Photos/WS/friendsSmallCompressed.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center top;
   z-index: 1;
   border-radius: 50%;
   float: right;
@@ -529,7 +537,7 @@ border-top: 1px dashed white;
 }
 .backgroundStoryDetail{
   background-color: var(--sub-color);
-  background-image:url("../Photos/WS/CanvisBackground.png");
+  background-image:url("../Photos/WS/CanvisBackgroundSmallCompressed.jpg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -605,7 +613,7 @@ border-top: 1px dashed white;
   padding: 40px 0px 0px 0px;
   color: black;
   background-color: var(--sub-color);
-  background-image:url("../Photos/WS/Guy at Ocean.png");
+  background-image:url("../Photos/WS/GuyatOcean/SmallCompress.jpg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -637,7 +645,7 @@ border-top: 1px dashed white;
 /**Contact Page**/
 #contactWrapper{
   text-align: center;
-  background-image:url("../Photos/WS/super kid.png");
+  background-image:url("../Photos/WS/SuperKidSmallCompressed.jpg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -686,7 +694,7 @@ border-top: 1px dashed white;
 
 /*About page */
 #aboutBackground{
-  background-image:url("../Photos/WS/sun and ocean.png");
+  background-image:url("../Photos/WS/SunandOceanSmallCompressed.jpg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;

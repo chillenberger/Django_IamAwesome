@@ -163,7 +163,7 @@ li {
     text-align: center;
     background-color: black;
     opacity: 0.75;
-    width: max-content;
+    width: 100vw;
   }
   .dropDownListNode{
     border-left: 8px solid black;
@@ -312,8 +312,8 @@ li {
 #writeInstructionImage{
   float: right;
   position: relative;
-  width: 55vw;
-  height: 55vw;
+  width: 45vw;
+  height: 45vw;
   margin: 10px;
   background-image:url('../Photos/Mobile/bright orange art rotatedSmallCompressed.png');
   background-repeat:no-repeat;
@@ -338,7 +338,7 @@ li {
   float: right;
   position: relative;
   width: 45vw;
-  height: 24vw;
+  height: 30vw;
   background: transparent;
   background-image:url("../Photos/Mobile/coffee+and+dogSmallCompressed.jpg");
   background-repeat:no-repeat;
@@ -530,7 +530,7 @@ li {
   padding: 40px 0px 0px 0px;
   color: black;
   background-color: var(--sub-color);
-  background-image:url("../Photos/Mobile/Guy at Ocean.png");
+  background-image:url("../Photos/Mobile/GuyatOcean/SmallCompress.jpg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -565,7 +565,7 @@ li {
 /**Contact Page**/
 #contactWrapper{
   text-align: center;
-  background-image:url("../Photos/Mobile/super kid.png");
+  background-image:url("../Photos/Mobile/SuperKidSmallCompressed.jpg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
@@ -613,7 +613,7 @@ li {
 
 /*About page */
 #aboutBackground{
-  background-image:url("../Photos/Mobile/sun and ocean.png");
+  background-image:url("../Photos/Mobile/SunandOceanSmallCompressed.jpg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
