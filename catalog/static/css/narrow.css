@@ -315,7 +315,7 @@ li {
   width: 55vw;
   height: 55vw;
   margin: 10px;
-  background-image:url(Photos/Mobile/bright orange art rotatedSmallCompressed.png);
+  background-image:url('../Photos/Mobile/bright orange art rotatedSmallCompressed.png');
   background-repeat:no-repeat;
   background-size: cover;
   background-position: center top;
