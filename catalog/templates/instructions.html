@@ -14,8 +14,8 @@
 <section class="introWrapper">
   <section class="instructionBanner col-12" id="writeIntro">
     <article>
-      <img id="writeInstructionImage"></img>
-      <h1 class="introInstructHead"><a href="{% url 'create-story' %}" >Write a story</a></h1>
+      <a href="{% url 'create-story' %}" ><img id="writeInstructionImage"></a>
+      <h1 class="introInstructHead"><a class="introInstructLink" href="{% url 'create-story' %}" >&nbsp;Write a story</a></h1>
       <p class="introInstructParag">Please write a story about an experience
         where you were inspired through someone elses actions.
       </p>
@@ -25,9 +25,8 @@
 
   <section class="instructionBanner" id="readIntro">
     <article>
-      <h1 class="introInstructHead"><a href="{% url 'storyList' %}">Stories of Awesomeness</a></h1>
-      <p class="introInstructParag">Read the amazing acts of people from around the world.</p>
-      <img id="readInstructionImage"></img>
+      <h1 class="introInstructHead"><a class="introInstructLink" href="{% url 'storyList' %}">&nbsp; Stories of Awesomeness</a></h1>
+      <p class="introInstructParag">Read the amazing acts of peoplefrom around the world.<a  href="{% url 'storyList' %}"><img id="readInstructionImage"></a></p>
     </article>
   </section>
 </section>
@@ -68,8 +67,8 @@
 
 <section class="instructionBanner col-12" id="aboutIntro">
   <article>
-    <img id="aboutInstructionImage"></img>
-    <h1 class="introInstructHead"><a href="{% url 'about' %}">About IamAwesome.life</a></h1>
+    <a href="{% url 'about' %}"><img id="aboutInstructionImage"></a>
+    <h1 class="introInstructHead"><a class="introInstructLink" href="{% url 'about' %}">&nbsp; About IamAwesome.life</a></h1>
     <p class="introInstructParag">Our company has set out on an adventure. We seek to connect the world
     through the stories of every day people. Please come with us as we change the
     world.
