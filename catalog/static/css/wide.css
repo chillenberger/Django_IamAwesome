@@ -244,7 +244,7 @@ border-top: 1px dashed white;
 }
 /*- intro styling -*/
 .introContainer{
-  background-image:url("../Photos/WS/BlackAndWhiteMtn.jpeg");
+  background-image:url("../Photos/WS/BlackAndWhiteMtnSmallCompressed.jpg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;
