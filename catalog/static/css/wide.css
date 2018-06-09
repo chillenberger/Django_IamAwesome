@@ -580,7 +580,12 @@ border-top: 1px dashed white;
 }
 #profileImage{
   border-radius: 50%;
-  width: 50%;
+  width: 50vw;
+  height: 50vw;
+  background-image:url("../Photos/WS/bright+orange+art+rotatedSmallCompressed.png");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center top;
   margin: 20px;
   margin-left: 25%;
   margin-right: 25%;
@@ -615,7 +620,7 @@ border-top: 1px dashed white;
   padding: 40px 0px 0px 0px;
   color: black;
   background-color: var(--sub-color);
-  background-image:url("../Photos/WS/GuyatOcean/SmallCompressed.jpg");
+  background-image:url("../Photos/WS/GuyatOceanSmallCompressed.jpg");
   background-attachment: fixed;
   background-repeat:no-repeat;
   background-size: cover;

@@ -8,7 +8,7 @@
   <!-- gives the option for the user to enter story -->
   <section class="bannerSection" id="profileWelcome">
     <p>Welcome back <br>-{{ user.get_username }}-</p>
-    <img id="profileImage" src="{% static 'Photos/bright orange art rotated.png' %}"></img>
+    <img id="profileImage"></img>
     <button class="basicButtonLogin">
       <a id="profileButton" href="{% url 'create-story' %}">Add a New Story</a>
     </button>
