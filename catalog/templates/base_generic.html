@@ -19,6 +19,17 @@
     <link id="size-stylesheet" rel="stylesheet" href="{% static 'css\narrow.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Lato|Roboto|Roboto+Slab|Italianno" rel="stylesheet">
   </head>
+  <style type="text/css">
+    #cover{
+      position: fixed;
+      background-color: white;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 9999;
+    }
+   </style>
   <body id="home">
 
 <!-- header for small and mobile devices -->
@@ -187,6 +198,9 @@ console.log("java works");
       console.log( $( '#dropDownListWrapper').css('display') );
       event.stopImmediatePropagation();
     };
+    $(window).on('load', function() {
+     $('#cover').remove();
+    });
     $(document).ready( function(){
       // scropt to make drop down nave list togle off when click outside dropdown box
       $( "body" ).click(function(event){
