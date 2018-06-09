@@ -5,7 +5,7 @@ var element = document.getElementById('cropper');
 var orientate_image = 0;
 $('#id_' + croppieFieldName + "_5").val(orientate_image);
 var cropper = new Croppie(element, {
-    viewport: { width: 100, height: 100 },
+    viewport: { width: 162, height: 100 },
     boundary: { width: 300, height: 300 },
     showZoomer: true,
     enableOrientation: true
