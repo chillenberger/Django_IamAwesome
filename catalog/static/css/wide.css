@@ -333,6 +333,9 @@ border-top: 1px dashed white;
 #readIntro{
   text-align: left;
 }
+#readInstruct{
+  clear: left;
+}
 #aboutIntro{
   right: 0;
   padding: 40px;
@@ -347,14 +350,14 @@ border-top: 1px dashed white;
   background-repeat:no-repeat;
   background-size: cover;
   background-position: center top;
-  margin-right: 30;
+  margin-right: 1.5em;
   border-radius: 50%;
 }
 #readInstructionImage{
   float: right;
   position: relative;
-  width: 37vw;
-  height: 23vw;
+  width: 25vw;
+  height: 18vw;
   background-image:url('../Photos/WS/friendsSmallCompressed.jpg');
   background-repeat:no-repeat;
   background-size: cover;
