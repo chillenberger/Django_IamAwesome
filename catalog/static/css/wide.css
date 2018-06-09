@@ -356,8 +356,8 @@ border-top: 1px dashed white;
 #readInstructionImage{
   float: right;
   position: relative;
-  width: 25vw;
-  height: 18vw;
+  width: 23vw;
+  height: 16vw;
   background-image:url('../Photos/WS/friendsSmallCompressed.jpg');
   background-repeat:no-repeat;
   background-size: cover;

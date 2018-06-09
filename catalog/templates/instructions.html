@@ -16,10 +16,10 @@
     <article>
       <a href="{% url 'create-story' %}" ><img id="writeInstructionImage"></a>
       <h1 class="introInstructHead"><a class="introInstructLink" href="{% url 'create-story' %}" >&nbsp;Write a story</a></h1>
-      <p class="introInstructParag">Please write a story about an experience
+      <p class="introInstructParag smallScreensOnly">Please write a story about an experience
         where you were inspired through someone elses actions.
       </p>
-      <p class="largeScreensOnly">The moments that shape who we are should not be kept to ourselves. Amazing acts of kindness
+      <p class="introInstructParaglargeScreensOnly">The moments that shape who we are should not be kept to ourselves. Amazing acts of kindness
         happen to millions every day. This is a place to share with others the amazing things we have seen, the things that
         make us or someone we know awesome and any positive moment that we want herd.</p>
     </article>
@@ -28,9 +28,11 @@
   <section class="instructionBanner" id="readIntro">
     <article>
       <h1 class="introInstructHead" id="readInstruct"><a class="introInstructLink" href="{% url 'storyList' %}">&nbsp; Read A Story</a></h1>
-      <p class="introInstructParag">Read some of the stories shared by people from around the world. The stories on this site are all written
-        by people just like you. We all experience moments that change our lives. These are some of the moments that have changed the lives
-        of others. <a  href="{% url 'storyList' %}"><img id="readInstructionImage"></a></p>
+      <p class="introInstructParag largeScreensOnly"><a  href="{% url 'storyList' %}"><img id="readInstructionImage"></a>Read some of the stories
+        shared by people from around the world. The stories on this site are all written by people just like you. We all experience moments that
+        change our lives. These are some of the moments that have changed the lives of others. </p>
+      <p class="introInstructParag smallScreensOnly">Read some of the stories shared by people from around the world. The stories on this site are all written
+        by people just like you.</p>
     </article>
   </section>
 </section>
