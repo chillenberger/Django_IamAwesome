@@ -243,7 +243,7 @@ li {
 /*- intro styling -*/
 .introContainer{
   background-image:url("../Photos/Mobile/BlackAndWhiteMtnSmallCompressed.jpg");
-  background-attachment: fixed;
+  background-attachment: scroll;  /*for small and mobile devices background fixed does not work so this is set to scroll*/
   background-repeat:no-repeat;
   background-size: cover;
   background-position: center top;
