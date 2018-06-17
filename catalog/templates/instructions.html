@@ -3,7 +3,7 @@
 {% block content %}
 {% load static %}
 
-<img id="introDecoration"  class="largeScreensOnly col-3"></img>
+<img id="introDecoration"  class="largeScreensOnly col-3">
 
 <section class="introContainer col-12">
   <a id="introMainArt" href="{% url 'create-story' %}">
@@ -14,7 +14,9 @@
 <section class="introWrapper">
   <section class="instructionBanner col-12" id="writeIntro">
     <article>
-      <a href="{% url 'create-story' %}" ><img id="writeInstructionImage" src="{% static 'Photos/WS/writing pictureSmallCompressed.jpeg' %}" alt="Woman writing in city"></a>
+      <a href="{% url 'create-story' %}" >
+        <img id="writeInstructionImage">
+      </a>
       <h1 class="introInstructHead"><a class="introInstructLink" href="{% url 'create-story' %}" >&nbsp;Write a story</a></h1>
       <p class="introInstructParag smallScreensOnly">Please write a story about an experience
         where you were inspired through someone elses actions.
@@ -28,7 +30,8 @@
   <section class="instructionBanner" id="readIntro">
     <article>
       <h1 class="introInstructHead" id="readInstruct"><a class="introInstructLink" href="{% url 'storyList' %}">&nbsp; Read A Story</a></h1>
-      <p class="introInstructParag largeScreensOnly"><a  href="{% url 'storyList' %}"><img id="readInstructionImage"></a>Read some of the stories
+      <p class="introInstructParag largeScreensOnly">
+        <a  href="{% url 'storyList' %}"><img id="readInstructionImage" class="largeScreensOnly"></a>Read some of the stories
         shared by people from around the world. The stories on this site are all written by people just like you. We all experience moments that
         change our lives. These are some of the moments that have changed the lives of others. </p>
       <p class="introInstructParag smallScreensOnly">Read some of the stories shared by people from around the world. The stories on this site are all written

@@ -346,10 +346,10 @@ border-top: 1px dashed white;
   position: relative;
   width: 24vw;
   height: 16vw;
-  /* background-image:url('../Photos/WS/writing+pictureSmallCompressed.jpeg');
+  background-image:url('../Photos/WS/writing pictureSmallCompressed.jpeg');
   background-repeat:no-repeat;
   background-size: cover;
-  background-position: center top; */
+  background-position: center top;
   margin-right: 1.5em;
   border-radius: 50%;
 }

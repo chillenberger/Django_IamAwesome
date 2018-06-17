@@ -327,22 +327,6 @@ li {
   margin-right: -40px;
   border-radius: 50%;
 }
-#readInstructionImage{
-  float: left;
-  position: relative;
-  width: 40vw;
-  height: 28vw;
-  background-image:url('../Photos/Mobile/friendsSmallCompressed.jpg');
-  background-repeat:no-repeat;
-  background-size: cover;
-  background-position: center top;
-  margin: 10px;
-  margin-top: 0px;
-  margin-left: -48px;
-
-  z-index: 1;
-  border-radius: 50%;
-}
 #aboutInstructionImage{
   float: right;
   position: relative;
