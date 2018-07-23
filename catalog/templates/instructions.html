@@ -2,92 +2,94 @@
 
 {% block content %}
 {% load static %}
+<section id="overflowHiddenBox">
+  <img id="introDecoration"  class="largeScreensOnly col-3">
 
-<img id="introDecoration"  class="largeScreensOnly col-3">
-
-<section class="introContainer col-12">
-  <a id="introMainArt" href="{% url 'create-story' %}">
-    Inspire Through Stories
-  </a>
-</section>
-
-<section class="introWrapper">
-  <section class="instructionBanner col-12" id="writeIntro">
-    <article>
-      <a href="{% url 'create-story' %}" >
-        <img id="writeInstructionImage">
-      </a>
-      <h1 class="introInstructHead"><a class="introInstructLink" href="{% url 'create-story' %}" >&nbsp;Write a story</a></h1>
-      <p class="introInstructParag smallScreensOnly">Please write a story about an experience
-        where you were inspired through someone elses actions.
-      </p>
-      <p class="introInstructParag largeScreensOnly">The moments that shape who we are should not be kept to ourselves. Amazing acts of kindness
-        happen to millions every day. This is a place to share with others the amazing things we have seen, the things that
-        make us or someone we know awesome and any positive moment that we want herd.</p>
-    </article>
+  <section class="introContainer col-12">
+    <a id="introMainArt" href="{% url 'create-story' %}">
+      Inspire Through Stories
+    </a>
   </section>
 
-  <section class="instructionBanner" id="readIntro">
-    <article>
-      <h1 class="introInstructHead" id="readInstruct"><a class="introInstructLink" href="{% url 'storyList' %}">&nbsp; Read A Story</a></h1>
-      <p class="introInstructParag largeScreensOnly">
-        <a  href="{% url 'storyList' %}"><img id="readInstructionImage" class="largeScreensOnly"></a>Read some of the stories
-        shared by people from around the world. The stories on this site are all written by people just like you. We all experience moments that
-        change our lives. These are some of the moments that have changed the lives of others. </p>
-      <p class="introInstructParag smallScreensOnly">Read some of the stories shared by people from around the world. The stories on this site are all written
-        by people just like you.</p>
-    </article>
-  </section>
-</section>
+  <section class="introWrapper">
+    <section class="instructionBanner col-12" id="writeIntro">
+      <article>
+        <a href="{% url 'create-story' %}" >
+          <img id="writeInstructionImage">
+        </a>
+        <h1 class="introInstructHead"><a class="introInstructLink" href="{% url 'create-story' %}" >&nbsp;Write a story</a></h1>
+        <p class="introInstructParag smallScreensOnly">Please write a story about an experience
+          where you were inspired through someone elses actions.
+        </p>
+        <p class="introInstructParag largeScreensOnly">The moments that shape who we are should not be kept to ourselves. Amazing acts of kindness
+          happen to millions every day. This is a place to share with others the amazing things we have seen, the things that
+          make us or someone we know awesome and any positive moment that we want herd.</p>
+        </article>
+      </section>
 
-<section class="introContainer largeScreensOnly">
-</section>
-
-<section  class="instructionBanner centeredInFlow largeScreensOnly" id="featuredStories">
-  <article>
-    <h1 class="introInstructHead">Featured Stories</h1>
-    {% if story_list %}
-      {% for story in story_list %}
-        <section class="storyContainer">
-          <section class="storyTitle"> {{story.title}} </section>
-          <a href="{{ story.get_absolute_url }}">
-            <img class="storyImage" src="{{ story.photo.url }}" alt="{{ story.title }}">
-          </a>
-          <article class="storyArticle"> {{ story.story|truncatechars:"80" }}</article>
+      <section class="instructionBanner" id="readIntro">
+        <article>
+          <h1 class="introInstructHead" id="readInstruct"><a class="introInstructLink" href="{% url 'storyList' %}">&nbsp; Read A Story</a></h1>
+          <p class="introInstructParag largeScreensOnly">
+            <a  href="{% url 'storyList' %}"><img id="readInstructionImage" class="largeScreensOnly"></a>Read some of the stories
+            shared by people from around the world. The stories on this site are all written by people just like you. We all experience moments that
+            change our lives. These are some of the moments that have changed the lives of others. </p>
+            <p class="introInstructParag smallScreensOnly">Read some of the stories shared by people from around the world. The stories on this site are all written
+              by people just like you.</p>
+            </article>
+          </section>
         </section>
-      {% endfor %}
-    {% else %}
-     <p>No Featured Stories</p>
-    {% endif %}
-    <section class="col-12">
-      <a class="basicButtonLogin" href="{% url 'storyList' %}">More Stories</a>
-    </section>
-  </article>
+
+        <section class="introContainer largeScreensOnly">
+        </section>
+
+        <section  class="instructionBanner centeredInFlow largeScreensOnly" id="featuredStories">
+          <article>
+            <h1 class="introInstructHead">Featured Stories</h1>
+            {% if story_list %}
+            {% for story in story_list %}
+            <section class="storyContainer">
+              <section class="storyTitle"> {{story.title}} </section>
+              <a href="{{ story.get_absolute_url }}">
+                <img class="storyImage" src="{{ story.photo.url }}" alt="{{ story.title }}">
+              </a>
+              <article class="storyArticle"> {{ story.story|truncatechars:"80" }}</article>
+            </section>
+            {% endfor %}
+            {% else %}
+            <p>No Featured Stories</p>
+            {% endif %}
+            <section class="col-12">
+              <a class="basicButtonLogin" href="{% url 'storyList' %}">More Stories</a>
+            </section>
+          </article>
+        </section>
+
+        <section class="introContainer col-12">
+        </section>
+
+        <section class="bannerSection">
+          <article>
+            <h1 class="introInstructHead">“A Dream You Dream Alone Is Only A Dream.
+              A Dream You Dream Together Is Reality.” -John Lennon/Yoko Ono</h1>
+            </article>
+          </section>
+
+          <section class="instructionBanner col-12" id="aboutIntro">
+            <article>
+              <a href="{% url 'about' %}"><img id="aboutInstructionImage"></a>
+              <h1 class="introInstructHead"><a class="introInstructLink" href="{% url 'about' %}">&nbsp; About IamAwesome.life</a></h1>
+              <p class="introInstructParag">Our company has set out on an adventure. We seek to connect the world
+                through the stories of every day people. Please come with us as we change the
+                world.
+              </p>
+            </article>
+          </section>
+
+          <section class="introContainer">
+
+          </section>
 </section>
 
-<section class="introContainer col-12">
-</section>
-
-<section class="bannerSection">
-  <article>
-    <h1 class="introInstructHead">“A Dream You Dream Alone Is Only A Dream.
-      A Dream You Dream Together Is Reality.” -John Lennon/Yoko Ono</h1>
-  </article>
-</section>
-
-<section class="instructionBanner col-12" id="aboutIntro">
-  <article>
-    <a href="{% url 'about' %}"><img id="aboutInstructionImage"></a>
-    <h1 class="introInstructHead"><a class="introInstructLink" href="{% url 'about' %}">&nbsp; About IamAwesome.life</a></h1>
-    <p class="introInstructParag">Our company has set out on an adventure. We seek to connect the world
-    through the stories of every day people. Please come with us as we change the
-    world.
-    </p>
-  </article>
-</section>
-
-<section class="introContainer">
-
-</section>
 
 {% endblock %}

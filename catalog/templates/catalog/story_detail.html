@@ -5,7 +5,7 @@
 <section class="backgroundStoryDetail col-12">
   <section class="fillHeight col-8 centeredInFlow" id="fullStoryContainer">
     <section>
-      <img src=" {{ story.photo.url }}" alt="{{ story.title }}"></img>
+      <img id="fullStoryImage" src=" {{ story.photo.url }}" alt="{{ story.title }}"></img>
       <h1 class="col-12" id="fullStoryTitle">{{ story.title }}</h1>
       <section class="storyArticleFull">
         {{  story.story|linebreaksbr }}

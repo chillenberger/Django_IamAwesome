@@ -26,6 +26,10 @@ body{
   overflow: auto;
   padding-top: var(--header-height);
 }
+#overflowHiddenBox{
+  position: relative;
+  overflow-x: hidden;
+}
 img {
   /* defalt image scales to fit width */
   width: 100%;
@@ -324,7 +328,7 @@ li {
   background-size: cover;
   background-position: center top;
   margin-top: -129px;
-  margin-right: -40px;
+  margin-right: -70px;
   border-radius: 50%;
 }
 #aboutInstructionImage{

@@ -28,6 +28,10 @@ body{
   overflow-x: hidden;
   margin-top: var(--header-height); /*push page content down out from under the header*/
 }
+#overflowHiddenBox{
+  position: relative;
+  overflow-x: hidden;
+}
 img {
   /* defalt image scales to fit width */
   width: 100%;
@@ -89,6 +93,7 @@ li {
 
 .fillHeight{
   min-height: 83.5vh;
+  margin-top: var(--header-height);
 }
 .rightInFlow{
   right: 0;
@@ -98,7 +103,8 @@ li {
 }
 .centeredInFlow{
   text-align: center;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .rightFloat{
   float: right;
@@ -138,6 +144,7 @@ li {
 #mainHeaderLarge{
   position: fixed;
   height: var(--header-height);
+  min-height: 50px;
   top: 0px;
   z-index: 2;
   background-color: white;
@@ -231,6 +238,7 @@ border-top: 1px dashed white;
 .end{
   padding: 0px;
   height: var(--footer-height);
+  min-height: 50px;
   text-align: center;
   box-shadow: 0px 0px 40px grey;
 }
@@ -306,7 +314,7 @@ border-top: 1px dashed white;
   background-color: black;
   opacity: 0.75;
   color: white;
-  padding: 20px;
+  padding: 10px;
   font-family: Italianno;
   font-size: 30px;
 }
@@ -401,7 +409,6 @@ border-top: 1px dashed white;
   background-position: center top;
 }
 #fullStoryContainer{
-  background-color: #ffebd0;
 }
 .storyContainer{
   width: 270px;
@@ -529,9 +536,14 @@ border-top: 1px dashed white;
 }
 
 /* story_detail styling */
+#fullStoryImage{
+  float: left;
+  width: 30%;
+  border-radius: 4px;
+}
 #fullStoryTitle{
   text-align: center;
-  font-size: 7vw;
+  font-size: 4vw;
 }
 .fullStoryButton{
   text-align: center;
@@ -560,6 +572,8 @@ border-top: 1px dashed white;
   background-color: white;
   color: black;
   padding: 40px;
+  padding-left: 10vw;
+  padding-right: 10vw;
   font-family: var(--default-font);
   opacity: 1;
 }
@@ -580,15 +594,15 @@ border-top: 1px dashed white;
 }
 #profileImage{
   border-radius: 50%;
-  width: 50vw;
-  height: 50vw;
+  width: 30vw;
+  height: 30vw;
   background-image:url("../Photos/WS/bright+orange+art+rotatedSmallCompressed.png");
   background-repeat:no-repeat;
   background-size: cover;
   background-position: center top;
-  margin: 20px;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin: 2vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
 }
 
 /* login/out/create Style*/
