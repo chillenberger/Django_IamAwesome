@@ -31,6 +31,7 @@ DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 ALLOWED_HOSTS = ['*']
 
 SITE_ID = 1
+SECURE_SSL_REDIRECT = True
 
 # Application definition
 
