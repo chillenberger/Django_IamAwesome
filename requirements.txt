@@ -3,7 +3,7 @@ botocore==1.10.23
 certifi==2018.4.16
 chardet==3.0.4
 dj-database-url==0.5.0
-Django==2.0.1
+Django==2.2.24
 django-croppie==1.2
 django-storages==1.6.6
 docutils==0.14
